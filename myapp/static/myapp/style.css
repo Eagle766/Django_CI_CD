@@ -1,0 +1,93 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Item row */
+.item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* Inputs */
+.item input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.item input:focus {
+    border-color: #4CAF50;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Add more button */
+button[type="button"] {
+    background-color: #2196F3;
+    color: white;
+    margin-top: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #1976D2;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #388E3C;
+}
+
+/* Result box */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f8e9;
+    border-left: 5px solid #4CAF50;
+    border-radius: 6px;
+    text-align: left;
+}

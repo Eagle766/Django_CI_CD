@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Calorie Calculator</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div id="items">
+            <div class="item">
+                <input type="text" name="food[]" placeholder="Food (e.g. rice)" required>
+                <input type="number" name="quantity[]" placeholder="Quantity (grams)" required>
+            </div>
+        </div>
+
+        <button type="button" onclick="addItem()">➕ Add More</button>
+        <br><br>
+
+        <button type="submit">Calculate Total</button>
+    </form>
+
+    {% if calories %}
+        <div class="result">
+            <h2>Total Calories: {{ calories }}</h2>
+        </div>
+    {% endif %}
+</div>
+
+<script>
+function addItem() {
+    const container = document.getElementById('items');
+
+    const newItem = document.createElement('div');
+    newItem.classList.add('item');
+
+    newItem.innerHTML = `
+        <input type="text" name="food[]" placeholder="Food" required>
+        <input type="number" name="quantity[]" placeholder="Quantity (grams)" required>
+    `;
+
+    container.appendChild(newItem);
+}
+</script>
+
+</body>
+</html>
