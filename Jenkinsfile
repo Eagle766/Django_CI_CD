@@ -30,13 +30,13 @@ node{
 
             sudo chown -R jenkins:jenkins ${Appdir}
 
-            rsync -av --delete --exclude='.git' ./  ${Appdir}
+            rsync -av --delete --exclude='.git' ./ ${Appdir}
             cd ${Appdir}
 
              python3 -m venv venv
             . venv/bin/activate
 
-            pip install -r requirement.txt
+            pip install -r requirements.txt
 
             python manage.py migrate
 
