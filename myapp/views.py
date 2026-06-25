@@ -18,6 +18,6 @@ def index(request):
 
             total =total + (food.calories_per_gram*int(j))
 
-        print("toatal calorie",total)
+        print("toatal calories",total)
        
     return render(request,'myapp/index.html',{'calories': total})
