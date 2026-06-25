@@ -30,7 +30,7 @@ node{
 
             sudo chown -R jenkins:jenkins ${Appdir}
 
-            rsync -av --delete --exclude= '.git' ./  ${Appdir}
+            rsync -av --delete --exclude='.git' ./  ${Appdir}
             cd ${Appdir}
 
              python3 -m venv venv
