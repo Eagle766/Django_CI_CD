@@ -45,8 +45,7 @@ pipeline {
             steps{
                 emailtext(
                     subject: "Your django app deployed is successfully",
-                    body: "Your app is deployed!
-                    http://34.248.132.135:8000/",
+                    body: "Your app is deployed!  http://34.248.132.135:8000/",
                     to: '${EMAIL}'
                     
                 )
