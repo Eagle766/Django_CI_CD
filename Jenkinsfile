@@ -3,7 +3,7 @@ pipeline {
 
     environment {
           CONTAINER_NAME= "my_django_cont"
-          IMAGE_NAME=  "DJANGO_IMAGE"
+          IMAGE_NAME=  "django_image"
           PORT= 8000
           EMAIL="mdshaisakhter840@gmail.com"
     }
