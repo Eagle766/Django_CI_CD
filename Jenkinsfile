@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    Environment {
+    environment {
           CONTAINER_NAME= "my_django_cont"
           IMAGE_NAME=  "DJANGO_IMAGE"
           PORT= 8000
