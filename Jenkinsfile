@@ -35,7 +35,7 @@ pipeline {
          stage('deployed container or container run'){
             steps{
                 sh '''
-                docker run -d -p ${PORT}:${PORT} -name $CONTAINER_NAME $IMAGE_NAME
+                docker run -d -p ${PORT}:${PORT} --name $CONTAINER_NAME $IMAGE_NAME
                 
                 '''
             }
@@ -43,9 +43,9 @@ pipeline {
 
          stage('SEND EMAIL'){
             steps{
-                emailtext(
+                emailext(
                     subject: "Your django app deployed is successfully",
-                    body: "Your app is deployed!  http://34.248.132.135:8000/",
+                    body: "Your app is deployed!  http://34.248.132.135:${PORT}/",
                     to: '${EMAIL}'
                     
                 )
