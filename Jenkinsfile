@@ -46,7 +46,7 @@ pipeline {
                 emailext(
                     subject: "Your django app deployed is successfully",
                     body: "Your app is deployed!  http://34.248.132.135:${PORT}/",
-                    to: '${EMAIL}'
+                    to: "${EMAIL}"
                     
                 )
             }
